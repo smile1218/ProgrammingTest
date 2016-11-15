@@ -9,10 +9,8 @@ public class Users {
     // Create new user with type, name and password
     // user created with this method should be automatically added to userList;
     public IUser create(int type, String name, String password) {
-        User user = new User();
-        user.setName(name);
-        user.setPassword(password);
-        user.setType(type);
+        User user = new User(type , name, password);
+
         return null;
     }
 
@@ -51,7 +49,7 @@ public class Users {
         User user = new User();
         int c=0;
         for(IUser i:userList){
-            if(user.getType() == type)c++;
+            if(i.getType() == type)c++;
         }
         return c;
     }

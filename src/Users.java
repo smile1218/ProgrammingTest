@@ -14,7 +14,6 @@ public class Users {
         user.setPassword(password);
         user.setType(type);
         return null;
-
     }
 
     // Add new user to repository
